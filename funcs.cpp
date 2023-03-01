@@ -46,8 +46,10 @@ int countPrimes(int a, int b){
 
 bool isTwinPrime(int n){
     bool twin = false;
-    if(isPrime(n-2)==true || isPrime(n+2)==true){
-        twin = true;
+    if(isPrime(n)==true){
+        if(isPrime(n-2)==true || isPrime(n+2)==true){
+            twin = true;
+        }
     }
     return twin;
 }
@@ -61,4 +63,14 @@ int nextTwinPrime(int n){
         twin = nextPrime(n);
     }
     return twin;
+}
+
+int largestTwinPrime(int a, int b){
+    int largest = -1;
+    for(int i=a;i<=b;i++){
+        if(isTwinPrime(i)==true){
+            largest = i;
+        }
+    }
+    return largest;
 }
