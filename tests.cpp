@@ -22,3 +22,10 @@ TEST_CASE("Not Prime Cases"){
     CHECK(isPrime(25)==false);
     CHECK(isPrime(4)==false);
 }
+
+TEST_CASE("Next Prime Cases"){
+    CHECK(nextPrime(2)==3);
+    CHECK(nextPrime(5)==7);
+    CHECK(nextPrime(13)==17);
+    CHECK(nextPrime(17)==19);
+}
