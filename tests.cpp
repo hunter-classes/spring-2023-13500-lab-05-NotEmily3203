@@ -21,6 +21,7 @@ TEST_CASE("Prime Cases"){
 TEST_CASE("Not Prime Cases"){
     CHECK(isPrime(25)==false);
     CHECK(isPrime(4)==false);
+    CHECK(isPrime(0)==false);
 }
 
 TEST_CASE("Next Prime Cases"){
@@ -33,4 +34,16 @@ TEST_CASE("Next Prime Cases"){
 TEST_CASE("Correct Prime Count Cases"){
     CHECK(countPrimes(2,7)==4);
     CHECK(countPrimes(4,30)==8);
+}
+
+TEST_CASE("Is Twin Prime Cases"){
+    CHECK(isTwinPrime(3)==true);
+    CHECK(isTwinPrime(5)==true);
+    CHECK(isTwinPrime(7)==true);
+}
+
+TEST_CASE("Isn't Twin Prime Cases"){
+    CHECK(isTwinPrime(23)==false);
+    CHECK(isTwinPrime(37)==false);
+    CHECK(isTwinPrime(2)==false);
 }

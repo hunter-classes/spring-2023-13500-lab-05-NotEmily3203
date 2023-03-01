@@ -13,10 +13,13 @@ bool isDivisibleBy(int n, int d){
 bool isPrime(int n){
     bool prime = true;
     for(int i=2;i<n-1;i++){
-        if(n%i == 0){
+        if(isDivisibleBy(n, i)){
             prime = false;
             break;
         }
+    }
+    if(n==0 || abs(n)==1){
+        prime = false;
     }
     return prime;
 }
@@ -39,4 +42,12 @@ int countPrimes(int a, int b){
         tempPrime++;
     }
     return count;
+}
+
+bool isTwinPrime(int n){
+    bool twin = false;
+    if(isPrime(n-2)==true || isPrime(n+2)==true){
+        twin = true;
+    }
+    return twin;
 }
