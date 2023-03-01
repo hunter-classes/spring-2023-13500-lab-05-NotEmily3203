@@ -28,3 +28,15 @@ int nextPrime(int n){
     }
     return prime;
 }
+
+int countPrimes(int a, int b){
+    int tempPrime = a;
+    int count = 0;
+    for(int i = a; i <= b; i++){
+        if(isPrime(tempPrime)==true){
+            count++;
+        }
+        tempPrime++;
+    }
+    return count;
+}

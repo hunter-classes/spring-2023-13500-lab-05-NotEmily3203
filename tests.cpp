@@ -29,3 +29,8 @@ TEST_CASE("Next Prime Cases"){
     CHECK(nextPrime(13)==17);
     CHECK(nextPrime(17)==19);
 }
+
+TEST_CASE("Correct Prime Count Cases"){
+    CHECK(countPrimes(2,7)==4);
+    CHECK(countPrimes(4,30)==8);
+}
