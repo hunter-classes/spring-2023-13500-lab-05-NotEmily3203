@@ -51,3 +51,14 @@ bool isTwinPrime(int n){
     }
     return twin;
 }
+
+int nextTwinPrime(int n){
+    int twin = n+1;
+    while(isPrime(twin)==false){
+        twin++;
+    }
+    while(isTwinPrime(twin)==false){
+        twin = nextPrime(n);
+    }
+    return twin;
+}

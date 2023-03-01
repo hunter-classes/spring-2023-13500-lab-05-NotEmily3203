@@ -47,3 +47,8 @@ TEST_CASE("Isn't Twin Prime Cases"){
     CHECK(isTwinPrime(37)==false);
     CHECK(isTwinPrime(2)==false);
 }
+TEST_CASE("Next Twin Prime Cases"){
+    CHECK(nextTwinPrime(3)==5);
+    CHECK(nextTwinPrime(37)==41);
+    CHECK(nextTwinPrime(17)==19);
+}
