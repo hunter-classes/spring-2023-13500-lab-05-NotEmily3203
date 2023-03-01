@@ -12,3 +12,13 @@ TEST_CASE("Indivisible Cases"){
     CHECK(isDivisibleBy(101, 25)==false);
     CHECK(isDivisibleBy(34, 11)==false);
 }
+
+TEST_CASE("Prime Cases"){
+    CHECK(isPrime(2)==true);
+    CHECK(isPrime(13)==true);
+}
+
+TEST_CASE("Not Prime Cases"){
+    CHECK(isPrime(25)==false);
+    CHECK(isPrime(4)==false);
+}
